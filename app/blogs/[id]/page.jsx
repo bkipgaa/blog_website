@@ -50,19 +50,12 @@ const page = ({ params }) => {
                             {/* Blog main image */}
                             <Image src={data.image} width={1280} height={720} alt='' />
                             {/* Blog content */}
-                            <h1 className='my-8 text-[26px] font-semibold'>Introduction:</h1>
-                            <p>{data.description}</p>
-                            {/* Example step content */}
-                            <h3 className='my-5 text-[18px] font-semibold'>Step 1: Self-Reflection and Goal Setting</h3>
-                            <p className='my-3'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your value</p>
-                            {/* Additional steps */}
-                            {/* ... Repeat similar structure for other steps ... */}
-                            {/* Conclusion section */}
-                            <h3 className='my-5 text-[18px] font-semibold'>Conclusion</h3>
-                            <p className='my-3'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your value</p>
+                           
+                            <div className='blog-content' dangerouslySetInnerHTML={{__html:data.description}}></div>
+                           
                             <div className='my-24'>
                                 {/* Social media sharing section */}
-                                <p className='text-black font font-semibold my-4'>Share this article on social media</p>
+                                <p className='text-black font-semibold my-4'>Share this article on social media</p>
                                 <div className='flex'>
                                     <Image src={assets.facebook_icon} width={50} alt='' />
                                     <Image src={assets.twitter_icon} width={50} alt='' />
